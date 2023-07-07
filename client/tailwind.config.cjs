@@ -6,7 +6,11 @@ export default {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+        "backgroundImage":{
+            "forest": "url('./public/forest_bg.jpg')"
+        }
+    },
   },
   plugins: [],
 }
