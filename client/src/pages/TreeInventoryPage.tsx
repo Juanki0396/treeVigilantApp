@@ -41,9 +41,9 @@ const TreeInvetoryPage = (): JSX.Element => {
 
     const SearchList = (): JSX.Element | null => {
         if(filterTrees.length === 0) return null;
-        const liStyle = "px-2 block flex-1 hover:bg-gray-200 text-start"
+        const liStyle = "px-2 py-2 block flex-1 hover:bg-gray-200 text-start"
         return (
-            <ul className="divide-y-2 flex flex-col ml-1 mr-4 text-green-800 bg-white">
+            <ul className="divide-y-2 flex flex-col rounded-md text-green-800 bg-white">
                 {filterTrees
                     .map(t => 
                     <button className={liStyle} onClick={onClick} value={t.name}>{t.name}</button>)}
@@ -54,8 +54,7 @@ const TreeInvetoryPage = (): JSX.Element => {
     return (
         <div className="flex flex-col pt-40">
             <h1 className="flex-1 text-center text-3xl font-bold">Inventory</h1>
-            <form className="flex-1 flex flex-col mx-72 rounded-lg border border-cyan-800 
-            bg-cyan-500/20 py-3 px-5">
+            <form className="flex-1 flex flex-col mx-72 py-3 px-5">
                 <input type="text" placeholder="Name..." value={query} onChange={onChange} 
                 className="rounded-lg bg-gray-200 px-5 py-2 text-gray-900"/>
                 <SearchList />
